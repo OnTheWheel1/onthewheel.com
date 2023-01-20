@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Open VIP can improve the speed of decompilation, resource code translate to name automatically and activate the smart editing and automatic completion function-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="4"
+    android:versionName="4.0.3"
+    android:compileSdkVersion="29"
+    android:compileSdkVersionCodename="10"
+    package="com.onthewheel.rpk"
+    platformBuildVersionCode="29"
+    platformBuildVersionName="10">
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="29" />
+    <!-- Have full network access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Access precise location only in the foreground -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Access approximate location only in the foreground -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- View network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- View Wi-Fi connections -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Run foreground service -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- This app can appear on top of other apps -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Request delete packages -->
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <!-- Run at startup -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Prevent phone from sleeping -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true" />
+    <application
+        android:theme="@7F0F01F4"
+        android:label="@7F0C0000"
+        android:icon="@7F030012"
+        android:name="com.onthewheel.rpk.BaseNative"
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:resizeableActivity="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseIntro">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.ShopeeActivity" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseKotlin" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseGofood" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BasePickup" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseResult" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseSignin" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseGbfood" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseGbpoin" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseHistory" />
+        <activity
+            android:theme="@7F0F01F4"
+            android:name="com.onthewheel.rpk.BaseFavorit" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@7F0D0000" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@7F0C004B" />
+        <service
+            android:name="com.onthewheel.rpk.BaseInstan"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.onthewheel.rpk.BaseWindow"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:theme="@01030010"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+</manifest>
